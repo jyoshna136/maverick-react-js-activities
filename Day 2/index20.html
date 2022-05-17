@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .blueColor {
+            color: blue;
+        }
+  </style>
+</head>
+<body>
+    <div id = 'root'> </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type = 'text/babel'>
+     function dateFormatter(){
+         let time = new Date();
+         return time.toLocaleDateString();
+     }
+
+     function formatName(user){
+         return user.firstname + ' ' +user.lastname;
+     }
+
+        function Hello()
+        {
+            let profile = {firstname: "Sachin", lastname : "Tendulkar"};
+            let imageURL = "https://www.socialsamosa.com/wp-content/uploads/2015/11/sachin-tendulkar.jpg"
+        return (<div>
+            <img src = {imageURL} width = "200" height = "200">  </img>
+        <h2>Hello ! {formatName (profile)} </h2>
+        <h3> Today's Date : {dateFormatter()}</h3>
+        </div>);  
+    }
+    function App(){
+        return (<div>
+        <h1 className = 'blueColor' >Welcome to Named Components </h1>
+        <Hello />
+        </div>)  
+    }
+    ReactDOM.render(<App></App>,document.getElementById('root'));
+
+    </script>
+</body>
+</html>

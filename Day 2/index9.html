@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = 'text/javascript'>
+     let usersArray = [
+         { name : "Raj" , age :35, address: {state : "MAH" , city : "rat"}},
+         {name : "Vijay", age : 55},
+         {name : "Ajay" , age :35, address: {state : "KR" , city : "tir"} },
+         {name : "Jyo" , age :27, address: { city : "tir"} }
+      ]
+      for (let user of usersArray)
+      {
+        document.write(`<p> Name=${user.name} ,age=${user.age},`), 
+            
+            document.write(`State = ${user.address?.state},City = ${user.address?.city} </p>`)
+      }
+    </script>
+</body>
+</html>
