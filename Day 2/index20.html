@@ -13,8 +13,8 @@
 </head>
 <body>
     <div id = 'root'> </div>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type = 'text/babel'>
      function dateFormatter(){
@@ -29,10 +29,9 @@
         function Hello()
         {
             let profile = {firstname: "Sachin", lastname : "Tendulkar"};
-            let imageURL = "https://www.socialsamosa.com/wp-content/uploads/2015/11/sachin-tendulkar.jpg"
-        return (<div>
-            <img src = {imageURL} width = "200" height = "200">  </img>
-        <h2>Hello ! {formatName (profile)} </h2>
+            let imageURL="data:image/jpeg;base64,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"
+        return (<div> <img src={imageURL} width = "200" height = "200"/> 
+            <h2>Hello ! {formatName (profile)} </h2>
         <h3> Today's Date : {dateFormatter()}</h3>
         </div>);  
     }
@@ -42,6 +41,10 @@
         <Hello />
         </div>)  
     }
+
+    // const container = document.getElementById('root');
+    // const root = createRoot(container);
+    // root.render(<App></App>);
     ReactDOM.render(<App></App>,document.getElementById('root'));
 
     </script>
